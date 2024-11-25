@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.shopping-cart-navbar {
+  width: 100%;
+  height: 40px;
+  background-color: #d4cccc;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
+  color: grey;
+}
+
+.link {
+  padding: 20px;
+}
+
+.main-container {
+  width: 60%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.product-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 40px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 70px;
+}
+
+.image-container img {
+  width: 100%;
+}
+
+.description {
+  color: grey;
+}
+
+.size-container {
+  display: flex;
+}
+
+.size-box {
+  width: 35px;
+  height: 35px;
+  margin-right: 13px;
+  border: 1px solid grey;
+  padding: 5px;
+  text-align: center;
+  color: grey;
+}
+
+.size-box:hover {
+  background-color: rgb(135, 134, 134);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.required {
+  color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.error-message {
+  color: red;
+}
+
+.add-cart-button {
+  margin-top: 30px;
+}
+
+.cart-item-container {
+  display: flex;
+  width: 300px;
+}
+
+.dropdown-menu {
+  width: 400px;
+}
+
+.dropdown-item {
+  height: 200px;
+  width: 50px;
+  margin-top: 10px;
+
+  img {
+    width: 50%;  
+    height: 100%;  
   }
-  to {
-    transform: rotate(360deg);
+}
+
+
+@media (max-width: 640px) {
+
+  .product-container {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  p {
+    font-size: 0.8em;
   }
 }
